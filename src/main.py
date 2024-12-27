@@ -25,7 +25,6 @@ import flet_web.fastapi
 from typing import Optional
 from flet_web.fastapi import serve_fastapi_web_app, FastAPI # import get_fastapi_web_app
 import uvicorn
-from routes import add_routes
 
 from libs.color import rgb
 import controls
@@ -121,8 +120,6 @@ if __name__ == "__main__":
         assets_dir = "assets",
         export_asgi_app = True
     )
-    
-    add_routes(app)
     
     uvicorn.run(
         app = app,
